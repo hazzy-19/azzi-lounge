@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #0E131C;
+  --color-royal-blue: #121D47;
+  --color-ice-blue: #C0CAD1;
+  --color-neon-blue: #1A2F73;
+  --color-soft-white: #F1F5F9;
+  --color-muted-slate: #94A3B8;
+
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-midnight text-ice-blue font-inter antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-ice-blue/5 backdrop-blur-md border border-ice-blue/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  
+  .glow-blue {
+    @apply shadow-[0_0_15px_rgba(26,47,115,0.5)];
+  }
+
+  /* Masonry Grid (CSS Multi-column Layout) handled by tailwind columns utility classes */
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
