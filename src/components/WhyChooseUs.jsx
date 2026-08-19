@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Star, Award, CheckCircle } from 'lucide-react';
+import VideoPreview from './VideoPreview';
 
 export default function WhyChooseUs() {
   return (
@@ -70,22 +71,13 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-1/2 relative"
+            className="w-full lg:w-1/2 flex justify-center lg:justify-end xl:justify-center relative"
           >
-            <div className="relative rounded-2xl overflow-hidden glass-card p-2">
-              <img 
-                src="/images/our barber taking care of a client.webp" 
-                alt="Azzi Lounge master barber attending to a client" 
-                className="w-full h-auto rounded-xl object-cover"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = 'https://placehold.co/800x1000/090D14/F59E0B?text=Master+Barber+at+Work';
-                }}
-              />
-              {/* Decorative elements */}
-              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-royal-blue/5 blur-3xl rounded-full"></div>
+            <div className="w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] shadow-2xl aspect-[9/16] relative z-10">
+              <VideoPreview src="/videos/about_section.mp4" />
             </div>
+            {/* Decorative elements */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-royal-blue/10 blur-3xl rounded-full"></div>
           </motion.div>
           
         </div>

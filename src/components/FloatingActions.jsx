@@ -15,7 +15,7 @@ export default function FloatingActions() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 400, damping: 17, delay: 1 }}
-        className="w-14 h-14 bg-royal-blue rounded-full flex items-center justify-center text-midnight shadow-lg glow-blue"
+        className="w-14 h-14 bg-royal-blue rounded-full flex items-center justify-center text-white shadow-lg glow-blue"
         aria-label="Call Azzi Lounge"
       >
         <Phone className="w-6 h-6" />

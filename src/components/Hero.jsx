@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
 
 export default function Hero() {
   return (
@@ -61,15 +60,6 @@ export default function Hero() {
             >
               Book Appointment
             </a>
-            <Link 
-              to="why-choose-us"
-              smooth={true}
-              duration={500}
-              offset={-80}
-              className="w-full sm:w-auto px-8 py-3 bg-ice-blue/5 border border-ice-blue/20 text-ice-blue font-medium rounded-full hover:bg-ice-blue/10 hover:border-white/40 transition-all duration-300 cursor-pointer text-center"
-            >
-              Learn More
-            </Link>
           </motion.div>
         </motion.div>
       </div>
